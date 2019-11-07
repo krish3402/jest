@@ -17,24 +17,8 @@
   </dependencies>
   <build>
     <finalName>webapp</finalName>
-  </build>
-  
-   <distributionManagement>
-  <repository>
-     <id>deployment</id>
-     <name>Internal Releases</name>
-     <url>http://localhost:8081/nexus/content/repositories/releases/</url>
-  </repository>
-  <snapshotRepository>
-     <id>deployment</id>
-     <name>snapshot </name>
-     <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-  </snapshotRepository>
-</distributionManagement>
-  <build>
-  	<plugins>		
-		
-  	  <plugin>
+     <plugins>
+    	  <plugin>
 		<groupId>org.jacoco</groupId>
 		<artifactId>jacoco-maven-plugin</artifactId>
 		<version>0.8.2</version>
@@ -66,7 +50,21 @@
 					</systemPropertyVariables>
 				</configuration>
 	</plugin>
-  </plugins>
- </build>
+    </plugins>
+  </build>
+  
+   <distributionManagement>
+  <repository>
+     <id>deployment</id>
+     <name>Internal Releases</name>
+     <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+  </repository>
+  <snapshotRepository>
+     <id>deployment</id>
+     <name>snapshot </name>
+     <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
+
 
 </project>
